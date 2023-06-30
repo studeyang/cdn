@@ -1,0 +1,123 @@
+/* 目录样式 */
+#jx-toc {
+    background: #fff;
+    border-left: 1px solid #00000012;
+    background-clip: padding-box;
+    padding: 5px 10px;
+    width: 200px;
+    position: fixed;
+    right: 10px;
+    top: 140px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 999;
+    cursor: pointer;
+    text-align: right;
+    /* max-height: 70%; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    color:  #34495e;
+}
+#jx-toc::-webkit-scrollbar {
+    width: 4px;
+}
+#jx-toc::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 4px;
+}
+#jx-toc:hover::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 53.3%, 0.4);
+}
+#jx-toc:hover::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 53.3%, 0.1);
+}
+#jx-toc ul {
+    display: block;
+    padding-inline-start: 0;
+    text-align: left;
+    list-style-type: none;
+}
+
+#jx-toc ul li a {
+    display: block;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 14px;
+    color: inherit;
+    background: 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+#jx-toc ul li a:hover {
+    text-decoration: underline;
+}
+/* 目前没有处理自动标识，所以先注释起来了 */
+/* #jx-toc .active {
+  border-left: 5px solid;
+  color: var(--theme-color, #42b983);
+  padding-left: 10px;
+} */
+#jx-toc a.toc-active {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* 回到顶部样式 */
+#jx-toc-gotop {
+    position: fixed;
+    right: 50px;
+    bottom: 68px;
+    background-color: var(--sidebar-background, #fafafa);
+    border: 1px solid var(--sidebar-border-color, rgba(0, 0, 0, 0.07));
+    border-radius: 1px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    z-index: 999;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    color: var(--sidebar-nav-link-color--hover, var(--sidebar-nav-link-color));
+    /*不使用jx的回到顶部*/
+    display:none;
+}
+
+#jx-sun {
+    position: fixed;
+    right: 68px;
+    bottom: 24px;
+    background-color: white;
+    border: 1px solid var(--sidebar-border-color, rgba(0, 0, 0, 0.07));
+    border-radius: 1px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    z-index: 999;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    color: black;
+}
+
+#jx-moon {
+    position: fixed;
+    right: 32px;
+    bottom: 24px;
+    background-color: black;
+    border: 1px solid var(--sidebar-border-color, rgba(0, 0, 0, 0.07));
+    border-radius: 1px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    z-index: 999;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    color: white;
+}
